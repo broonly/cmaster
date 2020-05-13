@@ -35,7 +35,8 @@ int main () {
 		ae[i] = link (ae[i], j);
 		ae[j] = link (ae[j], i);
 	}
-
+	
+	/* assuming the root is one */
 	dfs (-1, 0);
 
 	printf ("node   size\n");
