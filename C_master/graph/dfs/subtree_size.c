@@ -38,8 +38,9 @@ int main () {
 
 	dfs (-1, 0);
 
+	printf ("node   size\n");
 	for (i = 0; i < n; i++) {
-		printf("%d %d\n", i + 1, out[i] - in[i]);
+		printf(" %d\t%d\n", i + 1, out[i] - in[i]);
 	}
 	
 }
