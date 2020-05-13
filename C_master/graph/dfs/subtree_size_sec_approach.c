@@ -1,5 +1,4 @@
 #include <stdio.h>
-#include <string.h>
 
 #define 	N 	20000
 
@@ -40,8 +39,6 @@ int main () {
 	}
 	
 	dfs (-1, 0);
-
-	
 
 	printf ("node   size\n");
 	for (i = 0; i < n; i++) {
