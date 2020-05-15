@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-#define 	N 	20000
+#define 	N 	2000
 
 int oo[1 + (N - 1) * 2], oj[1 + (N - 1) * 2];
 
@@ -15,6 +15,8 @@ int ae[N], size[N];
 
 void dfs (int p, int i) {
 	int o, j;
+	size[i] = 1;
+	
 	for (o = ae[i]; o; o = oo[o]) {
 		j = oj[o];
 		if (j != p) {
@@ -32,10 +34,6 @@ int main () {
 		scanf ("%d%d", &i, &j), i--, j--;
 		ae[i] = link (ae[i], j);
 		ae[j] = link (ae[j], i);
-	}
-	
-	for (i = 0; i < n; i++) {
-		size[i] = 1;
 	}
 	
 	dfs (-1, 0);
